@@ -2,291 +2,290 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="Elodie Legrand — CV. Motivated 16-year-old student seeking part-time work in Faversham, Kent.">
 <title>Elodie Legrand — CV</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --cream: #faf7f2;
-    --ink: #1c1c1e;
-    --blush: #c8a4a4;
-    --gold: #b8955a;
-    --sage: #8a9e8a;
-    --light-sage: #e8efe8;
-    --light-blush: #f5eeee;
-    --border: #ddd8d0;
-  }
+:root {
+  --cream: #faf7f2;
+  --ink: #1c1c1e;
+  --blush: #c8a4a4;
+  --gold: #b8955a;
+  --sage: #8a9e8a;
+  --light-sage: #e8efe8;
+  --light-blush: #f5eeee;
+  --light-gold: #f5ead6;
+  --border: #ddd8d0;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"DM Sans",sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.6;
+  font-size:15px;
+  -webkit-text-size-adjust:100%;
+}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;
+  background:rgba(250,247,242,0.94);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  z-index:200;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 1.5rem;
+  height:54px;
+}
+.nav-name{
+  font-family:"Playfair Display",serif;
+  font-size:1rem;letter-spacing:0.02em;
+}
+.nav-links{display:flex;gap:1.5rem;}
+.nav-links a{
+  text-decoration:none;color:var(--ink);
+  font-size:0.75rem;font-weight:500;
+  letter-spacing:0.07em;text-transform:uppercase;
+  opacity:0.55;transition:opacity 0.2s;
+}
+.nav-links a:hover{opacity:1;}
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--ink);
-    line-height: 1.6;
-    font-size: 15px;
-  }
+/* ── SHARE BAR (mobile sticky bottom) ── */
+.share-bar{
+  position:fixed;bottom:0;left:0;right:0;
+  background:white;
+  border-top:1px solid var(--border);
+  padding:0.75rem 1rem;
+  display:flex;gap:0.6rem;
+  z-index:200;
+  box-shadow:0 -4px 20px rgba(0,0,0,0.06);
+}
+.share-btn{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:0.4rem;
+  padding:0.65rem 0.5rem;
+  border:none;border-radius:8px;
+  font-family:"DM Sans",sans-serif;
+  font-size:0.78rem;font-weight:500;
+  cursor:pointer;transition:opacity 0.15s,transform 0.15s;
+  text-decoration:none;
+}
+.share-btn:active{opacity:0.75;transform:scale(0.97);}
+.btn-download{background:var(--ink);color:white;}
+.btn-share{background:var(--light-sage);color:#3a5a3a;}
+.btn-copy{background:var(--light-gold);color:#7a5a1a;}
 
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    background: rgba(250,247,242,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    z-index: 100;
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 0 2.5rem;
-    height: 56px;
-  }
-  .nav-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem; letter-spacing: 0.03em;
-  }
-  .nav-links { display: flex; gap: 2rem; }
-  .nav-links a {
-    text-decoration: none; color: var(--ink); font-size: 0.82rem;
-    font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
-    opacity: 0.6; transition: opacity 0.2s;
-  }
-  .nav-links a:hover { opacity: 1; }
+/* desktop: top-right floating */
+.share-bar-desktop{
+  display:none;
+  position:fixed;top:70px;right:1.5rem;
+  flex-direction:column;gap:0.5rem;z-index:200;
+}
+.share-bar-desktop .share-btn{
+  flex:none;width:auto;padding:0.55rem 1.1rem;
+  border-radius:50px;font-size:0.75rem;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
 
-  /* ── HERO ── */
-  .hero {
-    padding: 110px 0 70px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(ellipse 70% 60% at 50% 0%, #f0e8e8 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero-eyebrow {
-    font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold); font-weight: 500; margin-bottom: 1rem;
-    animation: fadeUp 0.6s ease both;
-  }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(3rem, 8vw, 5.5rem);
-    line-height: 1.05;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    animation: fadeUp 0.6s 0.1s ease both;
-  }
-  .hero h1 em {
-    font-style: italic; color: var(--blush);
-  }
-  .hero-subtitle {
-    margin-top: 1.2rem;
-    font-size: 1.05rem; color: #666;
-    font-weight: 300; letter-spacing: 0.02em;
-    animation: fadeUp 0.6s 0.2s ease both;
-  }
-  .hero-tags {
-    display: flex; gap: 0.7rem; justify-content: center;
-    flex-wrap: wrap; margin-top: 2rem;
-    animation: fadeUp 0.6s 0.3s ease both;
-  }
-  .tag {
-    padding: 0.35rem 1rem; border-radius: 50px;
-    font-size: 0.78rem; font-weight: 500;
-    letter-spacing: 0.04em;
-  }
-  .tag-gold { background: #f5ead6; color: var(--gold); }
-  .tag-sage { background: var(--light-sage); color: #5a7a5a; }
-  .tag-blush { background: var(--light-blush); color: #a07070; }
+@media(min-width:700px){
+  .share-bar{display:none;}
+  .share-bar-desktop{display:flex;}
+}
 
-  /* ── SECTION LAYOUT ── */
-  .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-  section { padding: 60px 0; }
-  section + section { border-top: 1px solid var(--border); }
+/* ── HERO ── */
+.hero{
+  padding:86px 0 60px;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;top:0;left:0;right:0;bottom:0;
+  background:radial-gradient(ellipse 80% 55% at 50% 0%,#f0e8e8 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-eyebrow{
+  font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;margin-bottom:0.9rem;
+  animation:fadeUp 0.55s ease both;
+}
+.hero h1{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(2.8rem,10vw,5.5rem);
+  line-height:1.05;font-weight:700;letter-spacing:-0.02em;
+  animation:fadeUp 0.55s 0.1s ease both;
+}
+.hero h1 em{font-style:italic;color:var(--blush);}
+.hero-subtitle{
+  margin-top:1rem;font-size:0.95rem;color:#666;
+  font-weight:300;letter-spacing:0.02em;
+  animation:fadeUp 0.55s 0.2s ease both;
+  padding:0 1rem;
+}
+.hero-tags{
+  display:flex;gap:0.6rem;justify-content:center;
+  flex-wrap:wrap;margin-top:1.8rem;
+  animation:fadeUp 0.55s 0.3s ease both;
+  padding:0 1rem;
+}
+.tag{
+  padding:0.32rem 0.9rem;border-radius:50px;
+  font-size:0.75rem;font-weight:500;letter-spacing:0.03em;
+}
+.tag-gold{background:var(--light-gold);color:var(--gold);}
+.tag-sage{background:var(--light-sage);color:#5a7a5a;}
+.tag-blush{background:var(--light-blush);color:#a07070;}
 
-  .section-header {
-    display: flex; align-items: baseline; gap: 1rem;
-    margin-bottom: 2.5rem;
-  }
-  .section-label {
-    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold); font-weight: 500; white-space: nowrap;
-  }
-  .section-line {
-    flex: 1; height: 1px; background: var(--border);
-  }
-  h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem; font-weight: 700;
-    margin-bottom: 0.3rem;
-  }
+/* ── LAYOUT ── */
+.container{max-width:860px;margin:0 auto;padding:0 1.2rem;}
+section{padding:52px 0;}
+section+section{border-top:1px solid var(--border);}
+.section-header{
+  display:flex;align-items:center;gap:0.8rem;
+  margin-bottom:2rem;
+}
+.section-label{
+  font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;white-space:nowrap;
+}
+.section-line{flex:1;height:1px;background:var(--border);}
+h2{
+  font-family:"Playfair Display",serif;
+  font-size:1.7rem;font-weight:700;margin-bottom:0.25rem;
+}
 
-  /* ── ABOUT ── */
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;
-    align-items: start;
-  }
-  .about-text p {
-    color: #444; line-height: 1.8; font-size: 0.95rem;
-  }
-  .about-text p + p { margin-top: 1rem; }
-  .contact-card {
-    background: white; border: 1px solid var(--border);
-    border-radius: 12px; padding: 1.5rem;
-  }
-  .contact-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem; margin-bottom: 1rem; color: var(--ink);
-  }
-  .contact-item {
-    display: flex; align-items: center; gap: 0.7rem;
-    font-size: 0.85rem; color: #555; padding: 0.4rem 0;
-    border-bottom: 1px solid #f0ece6;
-  }
-  .contact-item:last-child { border-bottom: none; }
-  .contact-icon { width: 18px; text-align: center; color: var(--gold); }
+/* ── ABOUT ── */
+.about-grid{
+  display:grid;gap:1.8rem;
+}
+@media(min-width:600px){.about-grid{grid-template-columns:1fr 1fr;}}
+.about-text p{color:#444;line-height:1.8;font-size:0.93rem;}
+.about-text p+p{margin-top:0.9rem;}
+.contact-card{
+  background:white;border:1px solid var(--border);
+  border-radius:12px;padding:1.3rem;
+}
+.contact-card h3{
+  font-family:"Playfair Display",serif;
+  font-size:0.95rem;margin-bottom:0.9rem;
+}
+.contact-item{
+  display:flex;align-items:center;gap:0.6rem;
+  font-size:0.83rem;color:#555;
+  padding:0.38rem 0;border-bottom:1px solid #f0ece6;
+}
+.contact-item:last-child{border-bottom:none;}
+.ci{width:16px;text-align:center;color:var(--gold);}
 
-  /* ── ACHIEVEMENTS ── */
-  .achievements-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
-  }
-  .achievement-card {
-    background: white; border: 1px solid var(--border);
-    border-radius: 12px; padding: 1.5rem;
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: default;
-  }
-  .achievement-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.07);
-  }
-  .achievement-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
-  .achievement-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem; margin-bottom: 0.4rem;
-  }
-  .achievement-card p { font-size: 0.82rem; color: #666; line-height: 1.5; }
-  .achievement-card.gold { border-top: 3px solid var(--gold); }
-  .achievement-card.blush { border-top: 3px solid var(--blush); }
-  .achievement-card.sage { border-top: 3px solid var(--sage); }
+/* ── ACHIEVEMENTS ── */
+.achievements-grid{
+  display:grid;gap:1rem;
+}
+@media(min-width:500px){.achievements-grid{grid-template-columns:1fr 1fr;}}
+@media(min-width:760px){.achievements-grid{grid-template-columns:repeat(3,1fr);}}
+.ach-card{
+  background:white;border:1px solid var(--border);
+  border-radius:12px;padding:1.3rem;
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.ach-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.07);}
+.ach-card.gold{border-top:3px solid var(--gold);}
+.ach-card.blush{border-top:3px solid var(--blush);}
+.ach-card.sage{border-top:3px solid var(--sage);}
+.ach-icon{font-size:1.6rem;margin-bottom:0.7rem;}
+.ach-card h3{font-family:"Playfair Display",serif;font-size:0.95rem;margin-bottom:0.35rem;}
+.ach-card p{font-size:0.82rem;color:#666;line-height:1.55;}
 
-  /* ── EDUCATION ── */
-  .edu-block {
-    background: white; border: 1px solid var(--border);
-    border-radius: 12px; padding: 2rem;
-    margin-bottom: 1.2rem;
-  }
-  .edu-header {
-    display: flex; justify-content: space-between; align-items: flex-start;
-    margin-bottom: 1.2rem;
-  }
-  .edu-school {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-  }
-  .edu-dates {
-    font-size: 0.8rem; color: var(--gold); font-weight: 500;
-    letter-spacing: 0.05em;
-    background: #f5ead6; padding: 0.3rem 0.8rem; border-radius: 50px;
-    white-space: nowrap;
-  }
-  .subjects-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 0.5rem; margin-top: 0.5rem;
-  }
-  .subject-pill {
-    padding: 0.4rem 0.9rem; border-radius: 6px;
-    font-size: 0.78rem; font-weight: 500;
-    background: var(--light-sage); color: #3a5a3a;
-    text-align: center;
-  }
-  .subject-pill.completed {
-    background: #f5ead6; color: #8a5a1a;
-    position: relative;
-  }
-  .subject-pill.completed::after {
-    content: ' ✓'; 
-  }
-  .grade-note {
-    margin-top: 1rem; padding: 0.8rem 1rem;
-    background: #fdf8f0; border-left: 3px solid var(--gold);
-    border-radius: 0 6px 6px 0;
-    font-size: 0.82rem; color: #666;
-  }
-  .grade-note strong { color: var(--ink); }
+/* ── EDUCATION ── */
+.edu-block{
+  background:white;border:1px solid var(--border);
+  border-radius:12px;padding:1.6rem;
+}
+.edu-header{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  flex-wrap:wrap;gap:0.5rem;margin-bottom:1.1rem;
+}
+.edu-school{font-family:"Playfair Display",serif;font-size:1.15rem;}
+.edu-sub{font-size:0.8rem;color:#888;margin-top:0.15rem;}
+.edu-dates{
+  font-size:0.76rem;color:var(--gold);font-weight:500;
+  background:var(--light-gold);padding:0.28rem 0.75rem;
+  border-radius:50px;white-space:nowrap;
+}
+.subjects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:0.45rem;margin-top:0.4rem;
+}
+.spill{
+  padding:0.38rem 0.8rem;border-radius:6px;
+  font-size:0.76rem;font-weight:500;text-align:center;
+}
+.spill-done{background:var(--light-gold);color:#8a5a1a;}
+.spill-prog{background:var(--light-sage);color:#3a5a3a;}
+.grade-note{
+  margin-top:0.9rem;padding:0.7rem 0.9rem;
+  background:#fdf8f0;border-left:3px solid var(--gold);
+  border-radius:0 6px 6px 0;font-size:0.81rem;color:#666;
+}
+.grade-note strong{color:var(--ink);}
 
-  /* ── SKILLS ── */
-  .skills-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
-  }
-  .skill-group h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem; margin-bottom: 1rem; color: var(--ink);
-  }
-  .skill-item {
-    display: flex; align-items: center; gap: 0.8rem;
-    padding: 0.6rem 0; border-bottom: 1px solid #f0ece6;
-    font-size: 0.88rem;
-  }
-  .skill-item:last-child { border-bottom: none; }
-  .skill-dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    flex-shrink: 0;
-  }
-  .dot-gold { background: var(--gold); }
-  .dot-sage { background: var(--sage); }
-  .dot-blush { background: var(--blush); }
+/* ── SKILLS ── */
+.skills-grid{display:grid;gap:1.5rem;}
+@media(min-width:560px){.skills-grid{grid-template-columns:1fr 1fr;}}
+.skill-group h3{font-family:"Playfair Display",serif;font-size:0.95rem;margin-bottom:0.9rem;}
+.sk-row{
+  display:flex;align-items:center;gap:0.7rem;
+  padding:0.5rem 0;border-bottom:1px solid #f0ece6;font-size:0.87rem;
+}
+.sk-row:last-child{border-bottom:none;}
+.sk-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
 
-  /* ── AVAILABILITY ── */
-  .avail-grid {
-    display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-  .day-card {
-    text-align: center; padding: 0.8rem 0.3rem;
-    border-radius: 8px; font-size: 0.75rem;
-    font-weight: 500;
-  }
-  .day-card .day-name {
-    text-transform: uppercase; letter-spacing: 0.08em;
-    font-size: 0.65rem; margin-bottom: 0.3rem; opacity: 0.6;
-  }
-  .day-card.available { background: var(--light-sage); color: #3a5a3a; }
-  .day-card.partial { background: #f5ead6; color: #8a5a1a; }
-  .day-card.busy { background: #f5f0f0; color: #aaa; }
+/* ── AVAILABILITY ── */
+.avail-row{display:grid;grid-template-columns:repeat(7,1fr);gap:0.4rem;margin-top:0.5rem;}
+.day-card{
+  text-align:center;padding:0.7rem 0.2rem;border-radius:8px;
+  font-size:0.7rem;font-weight:500;line-height:1.35;
+}
+.day-card .dn{
+  display:block;font-size:0.6rem;text-transform:uppercase;
+  letter-spacing:0.07em;opacity:0.6;margin-bottom:0.2rem;
+}
+.day-avail{background:var(--light-sage);color:#3a5a3a;}
+.day-part{background:var(--light-gold);color:#8a5a1a;}
 
-  /* ── FOOTER ── */
-  footer {
-    padding: 3rem 0 2rem;
-    text-align: center;
-    border-top: 1px solid var(--border);
-  }
-  footer p { font-size: 0.8rem; color: #999; }
-  footer p span { color: var(--blush); }
+/* ── FOOTER ── */
+footer{
+  padding:2.5rem 0 5rem;/* bottom padding for share-bar */
+  text-align:center;border-top:1px solid var(--border);
+}
+@media(min-width:700px){footer{padding-bottom:2.5rem;}}
+footer p{font-size:0.78rem;color:#999;}
+footer span{color:var(--blush);}
 
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(18px);}
+  to{opacity:1;transform:none;}
+}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity 0.5s ease,transform 0.5s ease;}
+.reveal.visible{opacity:1;transform:none;}
 
-  .reveal {
-    opacity: 0; transform: translateY(16px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  .reveal.visible { opacity: 1; transform: none; }
-
-  /* ── MOBILE ── */
-  @media (max-width: 680px) {
-    .about-grid, .skills-grid { grid-template-columns: 1fr; }
-    .achievements-grid { grid-template-columns: 1fr 1fr; }
-    .avail-grid { gap: 0.3rem; }
-    .day-card { padding: 0.6rem 0.1rem; }
-    nav { padding: 0 1.2rem; }
-    .nav-links { gap: 1rem; }
-    .nav-links a { font-size: 0.75rem; }
-  }
+/* ── TOAST ── */
+.toast{
+  position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:var(--ink);color:white;
+  padding:0.55rem 1.2rem;border-radius:50px;
+  font-size:0.8rem;font-weight:500;
+  opacity:0;transition:opacity 0.3s,transform 0.3s;
+  pointer-events:none;z-index:300;white-space:nowrap;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+@media(min-width:700px){.toast{bottom:24px;}}
 </style>
 </head>
 <body>
@@ -297,9 +296,24 @@
     <a href="#about">About</a>
     <a href="#achievements">Awards</a>
     <a href="#education">Education</a>
-    <a href="#availability">Availability</a>
+    <a href="#availability">Hours</a>
   </div>
 </nav>
+
+<!-- Desktop share buttons -->
+<div class="share-bar-desktop" id="desktopShare">
+  <a class="share-btn btn-download" href="cv-print.html" target="_blank">⬇ Print CV</a>
+  <button class="share-btn btn-copy" onclick="copyLink()">🔗 Copy Link</button>
+</div>
+
+<!-- Mobile share bar -->
+<div class="share-bar">
+  <a class="share-btn btn-download" href="cv-print.html" target="_blank">⬇ Print CV</a>
+  <button class="share-btn btn-share" onclick="nativeShare()">↑ Share</button>
+  <button class="share-btn btn-copy" onclick="copyLink()">🔗 Link</button>
+</div>
+
+<div class="toast" id="toast">Link copied!</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -319,37 +333,25 @@
 <section id="about">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">01 &nbsp; About</span>
+      <span class="section-label">01 · About</span>
       <div class="section-line"></div>
     </div>
     <div class="about-grid reveal">
       <div class="about-text">
-        <h2>A little<br><em style="font-family:'Playfair Display',serif;font-style:italic;color:var(--blush)">about me</em></h2>
-        <div style="margin-top:1.2rem">
+        <h2>A little <em style="font-family:'Playfair Display',serif;font-style:italic;color:var(--blush)">about me</em></h2>
+        <div style="margin-top:1rem">
           <p>I am a 16-year-old student at school in Faversham, currently completing my GCSEs. I am hardworking, punctual and genuinely enjoy engaging with people — qualities I have developed through years of competitive ballroom dancing and the challenges of the Duke of Edinburgh Award.</p>
-          <p>I am looking for part-time work that fits around my studies, where I can contribute positively to a team, learn new skills, and offer reliable, friendly service. I am available after school and at weekends.</p>
+          <p>I am looking for part-time work that fits around my studies, where I can contribute positively to a team, learn new skills, and offer reliable, friendly service. I am available after school on weekdays and all day at weekends.</p>
         </div>
       </div>
       <div class="contact-card">
         <h3>Contact &amp; Details</h3>
-        <div class="contact-item">
-          <span class="contact-icon">📍</span>
-          <span>Faversham, Kent</span>
-        </div>
-        <div class="contact-item">
-          <span class="contact-icon">🎂</span>
-          <span>16 years old</span>
-        </div>
-        <div class="contact-item">
-          <span class="contact-icon">🌐</span>
-          <span>www.elodielegrand.xyz</span>
-        </div>
-        <div class="contact-item">
-          <span class="contact-icon">📋</span>
-          <span>References available on request</span>
-        </div>
-        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid #f0ece6;font-size:0.78rem;color:#888;text-align:center;">
-          Eligible to work in the UK &nbsp;·&nbsp; DBS check available
+        <div class="contact-item"><span class="ci">📍</span>Faversham, Kent</div>
+        <div class="contact-item"><span class="ci">🎂</span>16 years old</div>
+        <div class="contact-item"><span class="ci">🌐</span>www.elodielegrand.xyz</div>
+        <div class="contact-item"><span class="ci">📋</span>References available on request</div>
+        <div style="margin-top:0.9rem;padding-top:0.9rem;border-top:1px solid #f0ece6;font-size:0.75rem;color:#aaa;text-align:center;">
+          Eligible to work in the UK
         </div>
       </div>
     </div>
@@ -360,24 +362,24 @@
 <section id="achievements">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">02 &nbsp; Awards &amp; Achievements</span>
+      <span class="section-label">02 · Awards &amp; Achievements</span>
       <div class="section-line"></div>
     </div>
     <div class="achievements-grid reveal">
-      <div class="achievement-card gold">
-        <div class="achievement-icon">🏆</div>
+      <div class="ach-card gold">
+        <div class="ach-icon">🏆</div>
         <h3>Ballroom Dancing</h3>
-        <p>Multiple regional competition award winner. Competing at a high level demonstrates discipline, dedication, commitment to excellence and the ability to perform under pressure.</p>
+        <p>Multiple regional competition award winner. Competing at this level demands exceptional discipline, dedication and the ability to perform under pressure — skills that transfer directly to any workplace.</p>
       </div>
-      <div class="achievement-card sage">
-        <div class="achievement-icon">🥈</div>
+      <div class="ach-card sage">
+        <div class="ach-icon">🥾</div>
         <h3>Duke of Edinburgh Silver</h3>
-        <p>Holder of both Bronze and Silver DofE Awards. The Silver award involves volunteering, physical activity, skill development and a multi-day expedition — a mark of real personal character.</p>
+        <p>Holder of both Bronze and Silver DofE Awards — requiring volunteering, physical activity, skill development and a multi-day expedition. A nationally recognised mark of character and commitment.</p>
       </div>
-      <div class="achievement-card blush">
-        <div class="achievement-icon">📖</div>
-        <h3>English Language Grade 7</h3>
-        <p>Achieved Grade 7 (equivalent to a <strong>A grade</strong> under the traditional A–G system) in GCSE English Language — demonstrating strong written and verbal communication skills.</p>
+      <div class="ach-card blush">
+        <div class="ach-icon">📖</div>
+        <h3>English Literature — Grade 7</h3>
+        <p>Achieved Grade 7 in GCSE English Literature — equivalent to a <strong>Grade A</strong> under the traditional A–G system. A strong result that reflects excellent analytical and communication skills.</p>
       </div>
     </div>
   </div>
@@ -387,7 +389,7 @@
 <section id="education">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">03 &nbsp; Education</span>
+      <span class="section-label">03 · Education</span>
       <div class="section-line"></div>
     </div>
     <div class="reveal">
@@ -395,24 +397,24 @@
         <div class="edu-header">
           <div>
             <div class="edu-school">Secondary School, Faversham</div>
-            <div style="font-size:0.82rem;color:#888;margin-top:0.2rem">Currently studying for GCSEs</div>
+            <div class="edu-sub">Currently studying for GCSEs</div>
           </div>
-          <span class="edu-dates">2020 — 2025</span>
+          <span class="edu-dates">2021 — 2026</span>
         </div>
-
-        <div style="font-size:0.8rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;">Current GCSE Subjects</div>
+        <div style="font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Subjects</div>
         <div class="subjects-grid">
-          <span class="subject-pill completed">English Language</span>
-          <span class="subject-pill">Mathematics</span>
-          <span class="subject-pill">Physics</span>
-          <span class="subject-pill">Chemistry</span>
-          <span class="subject-pill">Biology</span>
-          <span class="subject-pill">History</span>
-          <span class="subject-pill">Dance</span>
-          <span class="subject-pill">Religious Education</span>
+          <span class="spill spill-done">English Literature ✓</span>
+          <span class="spill spill-prog">English Language</span>
+          <span class="spill spill-prog">Mathematics</span>
+          <span class="spill spill-prog">Combined Science</span>
+          <span class="spill spill-prog">History</span>
+          <span class="spill spill-prog">French</span>
+          <span class="spill spill-prog">Drama</span>
+          <span class="spill spill-prog">Dance</span>
+          <span class="spill spill-prog">Religious Education</span>
         </div>
         <div class="grade-note">
-          <strong>English Language:</strong> Grade 7 achieved — equivalent to a <strong>B grade</strong> under the traditional A–G grading system used before 2017. A Grade 7 sits firmly in the upper range of achievement.
+          <strong>English Literature: Grade 7 (Grade A).</strong> Schools now use a 1–9 number system instead of A–G. A Grade 7 is equivalent to a <strong>Grade A</strong> under the old system — a strong, upper-range achievement.
         </div>
       </div>
     </div>
@@ -423,25 +425,25 @@
 <section id="skills">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">04 &nbsp; Skills &amp; Qualities</span>
+      <span class="section-label">04 · Skills &amp; Qualities</span>
       <div class="section-line"></div>
     </div>
     <div class="skills-grid reveal">
       <div class="skill-group">
         <h3>Personal Qualities</h3>
-        <div class="skill-item"><span class="skill-dot dot-gold"></span>Reliable and punctual</div>
-        <div class="skill-item"><span class="skill-dot dot-gold"></span>Works well under pressure</div>
-        <div class="skill-item"><span class="skill-dot dot-gold"></span>Strong team player</div>
-        <div class="skill-item"><span class="skill-dot dot-gold"></span>Self-motivated and goal-driven</div>
-        <div class="skill-item"><span class="skill-dot dot-gold"></span>Friendly and approachable</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--gold)"></span>Reliable and consistently punctual</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--gold)"></span>Calm and effective under pressure</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--gold)"></span>Strong team player and collaborator</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--gold)"></span>Self-motivated and goal-driven</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--gold)"></span>Friendly, warm and approachable</div>
       </div>
       <div class="skill-group">
         <h3>Skills &amp; Competencies</h3>
-        <div class="skill-item"><span class="skill-dot dot-sage"></span>Strong written communication</div>
-        <div class="skill-item"><span class="skill-dot dot-sage"></span>Performing and public presentation</div>
-        <div class="skill-item"><span class="skill-dot dot-blush"></span>Expedition &amp; navigation skills (DofE)</div>
-        <div class="skill-item"><span class="skill-dot dot-blush"></span>Volunteering experience</div>
-        <div class="skill-item"><span class="skill-dot dot-blush"></span>Commitment to long-term goals</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--sage)"></span>Strong written &amp; verbal communication</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--sage)"></span>Public performance and presentation</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--blush)"></span>French language (conversational)</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--blush)"></span>Volunteering experience (DofE)</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--blush)"></span>Long-term commitment and follow-through</div>
       </div>
     </div>
   </div>
@@ -451,40 +453,19 @@
 <section id="availability">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">05 &nbsp; Availability</span>
+      <span class="section-label">05 · Availability</span>
       <div class="section-line"></div>
     </div>
     <div class="reveal">
-      <p style="color:#666;font-size:0.9rem;margin-bottom:1.5rem;">I am available after school on weekdays and throughout the weekend. I am happy to discuss specific hours to suit your business needs.</p>
-      <div class="avail-grid">
-        <div class="day-card partial">
-          <div class="day-name">Mon</div>
-          After school
-        </div>
-        <div class="day-card partial">
-          <div class="day-name">Tue</div>
-          After school
-        </div>
-        <div class="day-card partial">
-          <div class="day-name">Wed</div>
-          After school
-        </div>
-        <div class="day-card partial">
-          <div class="day-name">Thu</div>
-          After school
-        </div>
-        <div class="day-card partial">
-          <div class="day-name">Fri</div>
-          After school
-        </div>
-        <div class="day-card available">
-          <div class="day-name">Sat</div>
-          All day
-        </div>
-        <div class="day-card available">
-          <div class="day-name">Sun</div>
-          All day
-        </div>
+      <p style="color:#666;font-size:0.88rem;margin-bottom:1.2rem;">Available after school on weekdays and throughout the weekend. Happy to discuss specific hours to suit your business.</p>
+      <div class="avail-row">
+        <div class="day-card day-part"><span class="dn">Mon</span>After school</div>
+        <div class="day-card day-part"><span class="dn">Tue</span>After school</div>
+        <div class="day-card day-part"><span class="dn">Wed</span>After school</div>
+        <div class="day-card day-part"><span class="dn">Thu</span>After school</div>
+        <div class="day-card day-part"><span class="dn">Fri</span>After school</div>
+        <div class="day-card day-avail"><span class="dn">Sat</span>All day</div>
+        <div class="day-card day-avail"><span class="dn">Sun</span>All day</div>
       </div>
     </div>
   </div>
@@ -493,33 +474,45 @@
 <footer>
   <div class="container">
     <p>Elodie Legrand &nbsp;·&nbsp; Faversham, Kent &nbsp;·&nbsp; <span>www.elodielegrand.xyz</span></p>
-    <p style="margin-top:0.5rem">References available on request &nbsp;·&nbsp; Eligible to work in the UK</p>
+    <p style="margin-top:0.4rem">References available on request &nbsp;·&nbsp; Eligible to work in the UK</p>
   </div>
 </footer>
 
 <script>
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        // stagger children
-        const children = e.target.querySelectorAll('.achievement-card, .skill-group, .day-card');
-        children.forEach((c, i) => {
-          c.style.transitionDelay = (i * 0.07) + 's';
-          c.style.opacity = '0';
-          c.style.transform = 'translateY(12px)';
-          c.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-          setTimeout(() => {
-            c.style.opacity = '1';
-            c.style.transform = 'none';
-          }, i * 70);
-        });
-      }
+// Reveal on scroll
+const reveals = document.querySelectorAll(".reveal");
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add("visible");
+    const children = e.target.querySelectorAll(".ach-card,.skill-group,.day-card");
+    children.forEach((c,i) => {
+      c.style.opacity = "0";
+      c.style.transform = "translateY(10px)";
+      c.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+      setTimeout(() => { c.style.opacity="1"; c.style.transform="none"; }, i * 75);
     });
-  }, { threshold: 0.1 });
-  reveals.forEach(r => observer.observe(r));
-</script>
+  });
+}, { threshold: 0.08 });
+reveals.forEach(r => obs.observe(r));
 
+// Share
+function copyLink() {
+  navigator.clipboard.writeText("https://www.elodielegrand.xyz").then(() => showToast("Link copied!"));
+}
+function nativeShare() {
+  if (navigator.share) {
+    navigator.share({ title: "Elodie Legrand — CV", url: "https://www.elodielegrand.xyz" });
+  } else {
+    copyLink();
+  }
+}
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 2400);
+}
+</script>
 </body>
 </html>
