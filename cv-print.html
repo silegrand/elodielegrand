@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elodie Legrand — Print CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #fdfaf5;
+    --ink: #1c1c1e;
+    --blush: #c8a4a4;
+    --gold: #a0813a;
+    --sage: #6a8a6a;
+    --border: #d8d0c4;
+    --light-gold: #f5ead6;
+    --light-sage: #e4ede4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #e8e0d4;
+    color: var(--ink);
+    line-height: 1.5;
+    font-size: 12px;
+    display: flex; justify-content: center; align-items: flex-start;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  .page {
+    background: var(--cream);
+    width: 210mm;
+    min-height: 297mm;
+    padding: 14mm 14mm 12mm;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+    position: relative;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 2rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 12px;
+  }
+  .header-left {}
+  .name-block {
+    font-family: 'Playfair Display', serif;
+    font-size: 36pt;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .name-block em {
+    font-style: italic;
+    color: var(--blush);
+  }
+  .header-meta {
+    margin-top: 6px;
+    font-size: 8.5pt;
+    color: #666;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .header-tags {
+    display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px;
+  }
+  .htag {
+    padding: 2px 8px; border-radius: 50px; font-size: 7.5pt; font-weight: 500;
+  }
+  .htag-gold { background: var(--light-gold); color: var(--gold); }
+  .htag-sage { background: var(--light-sage); color: var(--sage); }
+  .htag-blush { background: #f5eeee; color: #a07070; }
+
+  /* QR block */
+  .qr-block {
+    text-align: center;
+  }
+  .qr-block img {
+    width: 72px; height: 72px; display: block; margin: 0 auto 4px;
+    border: 1px solid var(--border); border-radius: 4px; padding: 3px;
+    background: white;
+  }
+  .qr-label {
+    font-size: 6.5pt; color: #888; letter-spacing: 0.04em;
+    line-height: 1.3;
+  }
+  .qr-url {
+    font-size: 7pt; color: var(--gold); font-weight: 500;
+    margin-top: 2px;
+  }
+
+  /* ── BODY GRID ── */
+  .body-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 16px;
+  }
+  .full-width { grid-column: 1 / -1; }
+
+  /* ── SECTIONS ── */
+  .section { margin-bottom: 0; }
+  .section-title {
+    font-size: 6.5pt; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500;
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 5px;
+  }
+  .section-title::before {
+    content: ''; width: 3px; height: 3px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0;
+  }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 11pt; font-weight: 700; margin-bottom: 4px;
+  }
+
+  p, li { font-size: 9pt; color: #444; line-height: 1.55; }
+
+  /* ── ABOUT ── */
+  .about-text p { font-size: 9pt; color: #333; }
+  .about-text p + p { margin-top: 5px; }
+
+  /* ── ACHIEVEMENTS ── */
+  .achievements-list { display: flex; flex-direction: column; gap: 7px; }
+  .ach-item {
+    padding: 7px 9px; border-radius: 5px; border-left: 3px solid;
+  }
+  .ach-item.gold { border-color: var(--gold); background: #fdf8f0; }
+  .ach-item.sage { border-color: var(--sage); background: #f4f8f4; }
+  .ach-item.blush { border-color: var(--blush); background: #faf5f5; }
+  .ach-item h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 9.5pt; font-weight: 700; margin-bottom: 2px;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .ach-icon { font-size: 10pt; }
+  .ach-item p { font-size: 8.5pt; color: #555; }
+
+  /* ── EDUCATION ── */
+  .edu-school-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 10.5pt; font-weight: 700;
+  }
+  .edu-dates {
+    font-size: 7.5pt; color: var(--gold); font-weight: 500; margin-bottom: 6px;
+  }
+  .subjects-wrap {
+    display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px;
+  }
+  .spill {
+    padding: 2px 7px; border-radius: 3px; font-size: 7.5pt; font-weight: 500;
+  }
+  .spill-done { background: var(--light-gold); color: #8a5a1a; }
+  .spill-prog { background: var(--light-sage); color: #3a5a3a; }
+  .grade-box {
+    margin-top: 6px; padding: 5px 7px;
+    background: #fdf8f0; border-left: 2px solid var(--gold);
+    font-size: 8pt; color: #555; border-radius: 0 4px 4px 0;
+  }
+  .grade-box strong { color: var(--ink); }
+
+  /* ── SKILLS ── */
+  .skill-row {
+    display: flex; align-items: center; gap: 6px;
+    padding: 3px 0; border-bottom: 1px dotted #e8e4de;
+    font-size: 8.5pt; color: #444;
+  }
+  .skill-row:last-child { border-bottom: none; }
+  .sk-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+
+  /* ── AVAILABILITY ── */
+  .avail-row { display: flex; gap: 4px; }
+  .day-box {
+    flex: 1; text-align: center; padding: 5px 2px;
+    border-radius: 4px; font-size: 7pt; font-weight: 500; line-height: 1.3;
+  }
+  .day-box .dn { font-size: 6pt; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.65; display: block; }
+  .day-avail { background: var(--light-sage); color: #3a5a3a; }
+  .day-part { background: var(--light-gold); color: #8a5a1a; }
+
+  /* ── FOOTER ── */
+  .print-footer {
+    margin-top: 10px; padding-top: 8px;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .print-footer p { font-size: 7.5pt; color: #999; }
+  .print-footer .web { color: var(--gold); font-weight: 500; }
+
+  /* Print */
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; width: 100%; }
+  }
+  .print-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    background: var(--ink); color: white;
+    border: none; border-radius: 6px;
+    padding: 10px 20px; font-family: 'DM Sans', sans-serif;
+    font-size: 13px; font-weight: 500; cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transition: background 0.2s;
+  }
+  .print-btn:hover { background: #333; }
+  @media print { .print-btn { display: none; } }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨 Print / Save PDF</button>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <div class="name-block">Elodie<br><em>Legrand</em></div>
+      <div class="header-meta">Faversham, Kent &nbsp;·&nbsp; 16 years old &nbsp;·&nbsp; Seeking Part-Time Work</div>
+      <div class="header-tags">
+        <span class="htag htag-gold">🏆 Regional Ballroom Champion</span>
+        <span class="htag htag-sage">🥾 Duke of Edinburgh Silver</span>
+        <span class="htag htag-blush">📚 GCSE Student 2025</span>
+      </div>
+    </div>
+    <div class="qr-block">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASgAAAEoCAIAAABkZftOAAAF+0lEQVR4nO3dsZEcNxBAUVHFLBiE8g9DQTCOlSEbBqrQ/MDde/Zxdna4v2B0AfPj8/n8BfxZf9c3AN+R8CAgPAgIDwLCg4DwICA8CAgPAsKDgPAgIDwICA8CwoOA8CAgPAj83P0Hv379M3Efx/3+/e+R66y+7+71d5/b6vq79zP99yvT3/c2u8/HigcB4UFAeBAQHgSEBwHhQUB4ENie462cmpvtmp7znJovnZqD7V7n1P2fes6nfiev/96seBAQHgSEBwHhQUB4EBAeBIQHgWNzvJXb5j+7Tt3/9NzvlOl9jNNe+b1Z8SAgPAgIDwLCg4DwICA8CAgPAuNzvFdMnye5uy/ulfMkT+3rq+aWFSseBIQHAeFBQHgQEB4EhAcB4UHg283xqv11r5z/uXJqPsn/rHgQEB4EhAcB4UFAeBAQHgSEB4HxOd5t+6xO7Yur3pt3ylf93Nt+bytWPAgIDwLCg4DwICA8CAgPAsKDwLE53iv7r6p9ZbvXP/X3u6bvZ/r80ldY8SAgPAgIDwLCg4DwICA8CAgPAj8+n099D3/UbfOfan5V7Vvzfrz/WfEgIDwICA8CwoOA8CAgPAgIDwLjc7zpcyar/XK711m5ba516vtW55He9jxXrHgQEB4EhAcB4UFAeBAQHgSEB4FnztWs5jOn5k7V81lZfa/p80WnVfe/+zu04kFAeBAQHgSEBwHhQUB4EBAeBLJzNW/bf3XbnOd1X/X8zxVzPHiA8CAgPAgIDwLCg4DwICA8CGTnar5+vuIr1z/1/KfnadV+v+ocVCseBIQHAeFBQHgQEB4EhAcB4UEgO1ezmlNVXt83WN3/V53TWvEgIDwICA8CwoOA8CAgPAgIDwLP7Md7ZV70Vc/nfGX+tjJ9TuYuKx4EhAcB4UFAeBAQHgSEBwHhQWB7jjc9zznFuZ1nr//KvsdXWPEgIDwICA8CwoOA8CAgPAgIDwLHztWs3LaPa/c6q/ufnkOeuv4r54We4lxNeJjwICA8CAgPAsKDgPAgIDwIHJvjTe+7m94nNj3XmnZqvnTbeacrr5yDumLFg4DwICA8CAgPAsKDgPAgIDwIZO/HW7nt/W/T51iu3LbPcHp/4Morc7/d72XFg4DwICA8CAgPAsKDgPAgIDwIHHs/XjXvWpmeF33V7/vKvO71+aoVDwLCg4DwICA8CAgPAsKDgPAgMD7He2U+s6uam03vE3vF69/XigcB4UFAeBAQHgSEBwHhQUB4EDg2x1up3rdWzbte2a+48lX/v2773VrxICA8CAgPAsKDgPAgIDwICA8CP09d6NR+vOnPfX3+M71/b/r/a9dX3X9oxYOA8CAgPAgIDwLCg4DwICA8CGzvx9tVzYWm512n3Danqp7PV73+ihUPAsKDgPAgIDwICA8CwoOA8CBwbD/e9Hvwpvez7brtnMzbzhetzts8df1pVjwICA8CwoOA8CAgPAgIDwLCg8D2HK96T9rudXZV521O/321n3Dl1Pyt4v148DDhQUB4EBAeBIQHAeFBQHgQGD9X8zbT+7KqcyCr+z81P5y+/9vu04oHAeFBQHgQEB4EhAcB4UFAeBA4th/vNred67gyPa/bvU61r2/ltvM/T7HiQUB4EBAeBIQHAeFBQHgQEB4Ejr0fr5qHVPupXtk/tuu298jdtk9yxbma8ADhQUB4EBAeBIQHAeFBQHgQODbHW6neX7ermvNU+/FOfd/brjPNuZrwMOFBQHgQEB4EhAcB4UFAeBAYn+Pd5rZ9WbvXmX5/3W2fu3LbdXZZ8SAgPAgIDwLCg4DwICA8CAgPAt9ujnfK9LxrV/Uev1Omn9tt+/2seBAQHgSEBwHhQUB4EBAeBIQHgfE5XvVetZXb3vO2ux9sel43ve+uUr3PcMWKBwHhQUB4EBAeBIQHAeFBQHgQODbHu21uc8pt50nufu7KbfsGd932PsNdVjwICA8CwoOA8CAgPAgIDwLCg8CPz+dT3wN8O1Y8CAgPAsKDgPAgIDwICA8CwoOA8CAgPAgIDwLCg4DwICA8CAgPAsKDwH8Led9oidZ0owAAAABJRU5ErkJggg==" alt="QR code linking to www.elodielegrand.xyz">
+      <div class="qr-label">Scan to view<br>digital CV</div>
+      <div class="qr-url">elodielegrand.xyz</div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body-grid">
+
+    <!-- ABOUT — full width -->
+    <div class="full-width section">
+      <div class="section-title">About Me</div>
+      <div class="about-text">
+        <p>I am a 16-year-old student at school in Faversham, currently completing my GCSEs. I am hardworking, enthusiastic and reliable — qualities shaped by years of competitive ballroom dancing and the personal challenges of the Duke of Edinburgh Award programme.</p>
+        <p>I am seeking part-time work in Faversham where I can contribute positively to a team, build new skills and offer dependable, friendly service. I am happy to discuss hours that work for your business.</p>
+      </div>
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+    <div class="section">
+      <div class="section-title">Awards &amp; Achievements</div>
+      <div class="achievements-list">
+        <div class="ach-item gold">
+          <h4><span class="ach-icon">🏆</span> Ballroom Dancing — Regional Awards</h4>
+          <p>Multiple award winner at regional ballroom dancing competitions. Competing at this level demands discipline, a strong work ethic and the ability to perform under pressure.</p>
+        </div>
+        <div class="ach-item sage">
+          <h4><span class="ach-icon">🥾</span> Duke of Edinburgh — Silver Award</h4>
+          <p>Holder of both the Bronze and Silver DofE Awards, requiring volunteering, physical activity, skill development and a multi-day expedition. A widely recognised mark of character and commitment.</p>
+        </div>
+        <div class="ach-item blush">
+          <h4><span class="ach-icon">📖</span> GCSE English Language — Grade 7</h4>
+          <p>Achieved Grade 7, equivalent to a <strong>B grade</strong> in the traditional A–G grading system (used before 2017). Reflects strong written and verbal communication.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: Education + Skills + Availability -->
+    <div>
+      <!-- EDUCATION -->
+      <div class="section" style="margin-bottom:10px;">
+        <div class="section-title">Education</div>
+        <div class="edu-school-name">Secondary School, Faversham</div>
+        <div class="edu-dates">2020 — 2025 &nbsp;·&nbsp; Currently studying GCSEs</div>
+        <div class="subjects-wrap">
+          <span class="spill spill-done">English Language ✓</span>
+          <span class="spill spill-prog">Mathematics</span>
+          <span class="spill spill-prog">Physics</span>
+          <span class="spill spill-prog">Chemistry</span>
+          <span class="spill spill-prog">Biology</span>
+          <span class="spill spill-prog">History</span>
+          <span class="spill spill-prog">Dance</span>
+          <span class="spill spill-prog">Religious Education</span>
+        </div>
+        <div class="grade-box">
+          <strong>Note on grades:</strong> Schools now use a 1–9 number system. Grade 9 = A*, Grade 7 = <strong>B</strong>, Grade 4 = C pass. Elodie's Grade 7 in English Language is a solid upper-range result.
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="section" style="margin-bottom:10px;">
+        <div class="section-title">Skills &amp; Qualities</div>
+        <div class="skill-row"><span class="sk-dot" style="background:var(--gold)"></span>Reliable, punctual and self-motivated</div>
+        <div class="skill-row"><span class="sk-dot" style="background:var(--gold)"></span>Works well under pressure and in a team</div>
+        <div class="skill-row"><span class="sk-dot" style="background:var(--sage)"></span>Strong written and verbal communication</div>
+        <div class="skill-row"><span class="sk-dot" style="background:var(--sage)"></span>Public performance and presentation skills</div>
+        <div class="skill-row"><span class="sk-dot" style="background:var(--blush)"></span>Volunteering and community experience (DofE)</div>
+        <div class="skill-row"><span class="sk-dot" style="background:var(--blush)"></span>Committed to long-term goals</div>
+      </div>
+
+      <!-- AVAILABILITY -->
+      <div class="section">
+        <div class="section-title">Availability</div>
+        <div class="avail-row">
+          <div class="day-box day-part"><span class="dn">Mon</span>After school</div>
+          <div class="day-box day-part"><span class="dn">Tue</span>After school</div>
+          <div class="day-box day-part"><span class="dn">Wed</span>After school</div>
+          <div class="day-box day-part"><span class="dn">Thu</span>After school</div>
+          <div class="day-box day-part"><span class="dn">Fri</span>After school</div>
+          <div class="day-box day-avail"><span class="dn">Sat</span>All day</div>
+          <div class="day-box day-avail"><span class="dn">Sun</span>All day</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="print-footer">
+    <p>References available on request &nbsp;·&nbsp; Eligible to work in the UK</p>
+    <p class="web">www.elodielegrand.xyz</p>
+  </div>
+
+</div>
+
+</body>
+</html>
