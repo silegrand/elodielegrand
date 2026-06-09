@@ -126,6 +126,7 @@ p,li{font-size:8.5pt;color:#444;line-height:1.55;}
 .dbox .dn{font-size:5.5pt;text-transform:uppercase;letter-spacing:0.05em;opacity:0.6;display:block;}
 .day-avail{background:var(--light-sage);color:#3a5a3a;}
 .day-part{background:var(--light-gold);color:#8a5a1a;}
+.day-none{background:#f0f0f0;color:#aaa;}
 
 /* footer */
 .pfooter{
@@ -136,9 +137,18 @@ p,li{font-size:8.5pt;color:#444;line-height:1.55;}
 .pfooter .web{color:var(--gold);font-weight:500;}
 
 /* print */
+@page{
+  size:A4 portrait;
+  margin:8mm 10mm;
+}
 @media print{
   body{background:white;padding:0;gap:0;}
-  .page{box-shadow:none;border-radius:0;max-width:none;width:100%;}
+  .page{
+    box-shadow:none;border-radius:0;max-width:none;width:100%;
+    padding:0;
+    page-break-after:avoid;
+    page-break-inside:avoid;
+  }
   .mobile-actions,.desktop-actions{display:none!important;}
 }
 
@@ -289,9 +299,9 @@ p,li{font-size:8.5pt;color:#444;line-height:1.55;}
         <div class="stitle">Availability</div>
         <div class="avail-row">
           <div class="dbox day-part"><span class="dn">Mon</span>After school</div>
-          <div class="dbox day-part"><span class="dn">Tue</span>After school</div>
+          <div class="dbox day-none"><span class="dn">Tue</span>Not available</div>
           <div class="dbox day-part"><span class="dn">Wed</span>After school</div>
-          <div class="dbox day-part"><span class="dn">Thu</span>After school</div>
+          <div class="dbox day-none"><span class="dn">Thu</span>Not available</div>
           <div class="dbox day-part"><span class="dn">Fri</span>After school</div>
           <div class="dbox day-avail"><span class="dn">Sat</span>All day</div>
           <div class="dbox day-avail"><span class="dn">Sun</span>All day</div>
@@ -303,7 +313,7 @@ p,li{font-size:8.5pt;color:#444;line-height:1.55;}
         <div class="stitle">Contact</div>
         <div class="sk-row"><span class="skdot" style="background:var(--gold)"></span>146 Edward Vinson Drive, Faversham, Kent ME13 8FF</div>
         <div class="sk-row"><span class="skdot" style="background:var(--gold)"></span>07920 510243</div>
-        <div class="sk-row"><span class="skdot" style="background:var(--gold)"></span>elodiefleurlegrand@gmail.com</div>
+        <div class="sk-row"><span class="skdot" style="background:var(--gold)"></span>elodiefleurlegrand@icloud.com</div>
         <div class="sk-row"><span class="skdot" style="background:var(--gold)"></span>www.elodielegrand.xyz</div>
         <div class="sk-row"><span class="skdot" style="background:var(--gold)"></span>References available on request</div>
         <div class="sk-row"><span class="skdot" style="background:var(--gold)"></span>Eligible to work in the UK</div>
